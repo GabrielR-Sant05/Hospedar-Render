@@ -1,9 +1,9 @@
-services:
-  - type: web
-    name: hello-world-api
-    env: docker
-    plan: free
-    dockerfilePath: Dockerfile
-    envVars:
-      - key: PORT
-        value: 8080
+ services:
+   - type: web
+     name: hello-world-api
+     env: docker
+     plan: free
+     dockerfilePath: Dockerfile
+     envVars:
+       - key: PORT
+         value: 8080
