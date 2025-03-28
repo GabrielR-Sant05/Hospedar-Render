@@ -1,7 +1,16 @@
-FROM python:3.10-slim
+FROM python:3.9-slim
+
+# Definir o diretório de trabalho
 WORKDIR /app
+
+# Copiar os arquivos necessários
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
+
+# Expor a porta usada pela aplicação
 EXPOSE 8080
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:8080", "app:app"]
+
+# Comando para iniciar a aplicação
+CMD ["python", "app.py"]
