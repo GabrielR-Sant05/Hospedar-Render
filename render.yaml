@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: webaspnetrender
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    buildCommand: ""
+    startCommand: ""
+    envVars:
+      - key: PORT
+        value: 8080
